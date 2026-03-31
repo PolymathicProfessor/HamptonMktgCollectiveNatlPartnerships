@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hampton Marketing Collective — National Partner Organizations</title>
+<meta name="description" content="HMC's seven national partner organizations — AMA, NRF, NSN, BRAG, Harlem's Fashion Row, CFDA, and the FSF Virgil Abloh Post-Modern Scholarship.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #0C2340;
+    --gold:    #CFB53B;
+    --gold2:   #e8cc55;
+    --white:   #FFFFFF;
+    --offwhite:#F8F6F0;
+    --border:  #E2DDD4;
+    --text:    #1a1a1a;
+    --muted:   #5F5E5A;
+
+    /* org accent colors */
+    --ama:   #CC0000;
+    --ama-l: #FFF0F0;
+    --nrf:   #003087;
+    --nrf-l: #EEF2FF;
+    --nsn:   #1A6B3C;
+    --nsn-l: #EEFBF3;
+    --brag:  #8B1A1A;
+    --brag-l:#FFF5F0;
+    --hfr:   #1C1C1C;
+    --hfr-l: #F5F5F5;
+    --fsf:   #4A0080;
+    --fsf-l: #F8F0FF;
+    --cfda:  #1a1a1a;
+    --cfda-l:#F2F0EC;
+    --cfda-a:#B8860B;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--navy);
+    color: var(--text);
+  }
+
+  /* ── BANNER ─────────────────────────────────────── */
+  .banner {
+    background: var(--navy);
+    padding: 48px 64px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      45deg, transparent, transparent 60px,
+      rgba(207,181,59,0.03) 60px, rgba(207,181,59,0.03) 61px
+    );
+    pointer-events: none;
+  }
+
+  .wheel {
+    position: absolute;
+    right: 52px; top: 12px;
+    opacity: 0.05;
+    width: 220px; height: 220px;
+    pointer-events: none;
+  }
+
+  .banner-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 32px;
+    border-bottom: 2px solid var(--gold);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .banner-left {}
+
+  .eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .banner-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(28px, 4vw, 46px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .banner-sub {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.03em;
+  }
+
+  .banner-right { text-align: right; }
+
+  .banner-badge {
+    display: inline-block;
+    background: rgba(207,181,59,0.1);
+    border: 1.5px solid var(--gold);
+    border-radius: 4px;
+    padding: 7px 16px;
+    margin-bottom: 8px;
+  }
+  .banner-badge-text {
+    font-family: 'Lora', serif;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+  .banner-meta { font-size: 10px; color: rgba(255,255,255,0.3); }
+
+  /* ── NAV ─────────────────────────────────────────── */
+  .nav {
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(207,181,59,0.15);
+    padding: 0 64px;
+  }
+  .nav-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    gap: 0;
+  }
+  .nav a {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    padding: 13px 18px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
+  }
+  .nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* ── INTRO STRIP ─────────────────────────────────── */
+  .intro {
+    background: var(--offwhite);
+    padding: 40px 64px 0;
+  }
+  .intro-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .intro-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 820px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--border);
+  }
+  .intro-text strong { font-weight: 600; color: var(--text); }
+
+  /* ── MAIN GRID ───────────────────────────────────── */
+  .main {
+    background: var(--offwhite);
+    padding: 36px 64px 60px;
+  }
+  .main-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 800px) {
+    .main-inner { grid-template-columns: 1fr; }
+    .banner, .nav, .intro, .main, .footer { padding-left: 24px; padding-right: 24px; }
+  }
+
+  /* ── ORG CARD ────────────────────────────────────── */
+  .org-card {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .org-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  }
+
+  .card-head {
+    padding: 22px 24px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .org-icon {
+    width: 48px; height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-family: 'Lora', serif;
+  }
+
+  .org-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+
+  .org-full {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+
+  .card-body {
+    padding: 18px 24px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    font-weight: 400;
+    color: #3a3a3a;
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+
+  /* highlight box */
+  .highlight {
+    border-radius: 7px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+
+  .highlight-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .highlight-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.55;
+  }
+
+  /* pill tags */
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .pill {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  /* divider line */
+  .card-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 14px 0;
+  }
+
+  .card-footer {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .card-footer-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── AMA ── */
+  .ama .org-icon  { background: var(--ama-l); color: var(--ama); }
+  .ama .highlight { background: var(--ama-l); }
+  .ama .highlight-label { color: var(--ama); }
+  .ama .highlight-text  { color: #660000; }
+  .ama .pill      { background: var(--ama-l); color: var(--ama); }
+  .ama .card-footer-dot { background: var(--ama); }
+
+  /* ── NRF ── */
+  .nrf .org-icon  { background: var(--nrf-l); color: var(--nrf); }
+  .nrf .highlight { background: var(--nrf-l); }
+  .nrf .highlight-label { color: var(--nrf); }
+  .nrf .highlight-text  { color: #001a5e; }
+  .nrf .pill      { background: var(--nrf-l); color: var(--nrf); }
+  .nrf .card-footer-dot { background: var(--nrf); }
+
+  /* ── NSN ── */
+  .nsn .org-icon  { background: var(--nsn-l); color: var(--nsn); }
+  .nsn .highlight { background: var(--nsn-l); }
+  .nsn .highlight-label { color: var(--nsn); }
+  .nsn .highlight-text  { color: #0f3d22; }
+  .nsn .pill      { background: var(--nsn-l); color: var(--nsn); }
+  .nsn .card-footer-dot { background: var(--nsn); }
+
+  /* ── BRAG ── */
+  .brag .org-icon  { background: var(--brag-l); color: var(--brag); }
+  .brag .highlight { background: var(--brag-l); }
+  .brag .highlight-label { color: var(--brag); }
+  .brag .highlight-text  { color: #4a0e0e; }
+  .brag .pill      { background: var(--brag-l); color: var(--brag); }
+  .brag .card-footer-dot { background: var(--brag); }
+
+  /* ── HFR ── */
+  .hfr .org-icon  { background: var(--hfr-l); color: var(--hfr); border: 1px solid #ddd; }
+  .hfr .highlight { background: var(--hfr-l); border: 1px solid #e0e0e0; }
+  .hfr .highlight-label { color: #333; }
+  .hfr .highlight-text  { color: #444; }
+  .hfr .pill      { background: #f0f0f0; color: #222; }
+  .hfr .card-footer-dot { background: #444; }
+
+  /* ── FSF ── */
+  .fsf .org-icon  { background: var(--fsf-l); color: var(--fsf); }
+  .fsf .highlight { background: var(--fsf-l); }
+  .fsf .highlight-label { color: var(--fsf); }
+  .fsf .highlight-text  { color: #2d0050; }
+  .fsf .pill      { background: var(--fsf-l); color: var(--fsf); }
+  .fsf .card-footer-dot { background: var(--fsf); }
+
+  /* ── CFDA ── */
+  .cfda .org-icon  { background: var(--cfda-l); color: var(--cfda); border: 1px solid #ccc; font-size: 13px; font-family: 'Poppins', sans-serif; letter-spacing: 0; }
+  .cfda .highlight { background: var(--cfda-l); border: 1px solid #ddd; }
+  .cfda .highlight-label { color: var(--cfda-a); }
+  .cfda .highlight-text  { color: #3a3a2a; }
+  .cfda .pill      { background: var(--cfda-l); color: var(--cfda); border: 1px solid #ccc; }
+  .cfda .card-footer-dot { background: var(--cfda-a); }
+
+  /* FSF special — faculty-advised accent */
+  .fsf-badge {
+    display: inline-block;
+    background: #F8F0FF;
+    border: 1.5px solid var(--fsf);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fsf);
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* ── FOOTNOTE SECTION ─────────────────────────────── */
+  .footnote-section {
+    background: var(--navy);
+    padding: 48px 64px;
+  }
+  .footnote-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .footnote-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 28px;
+  }
+  @media (max-width: 760px) {
+    .footnote-grid { grid-template-columns: 1fr; }
+  }
+  .footnote-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 20px;
+    transition: background .2s;
+  }
+  .footnote-card:hover { background: rgba(255,255,255,0.07); }
+  .footnote-icon { font-size: 20px; margin-bottom: 10px; display: block; }
+  .footnote-title { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 7px; }
+  .footnote-text  { font-size: 11.5px; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  .footer {
+    background: #060f1d;
+    padding: 20px 64px;
+    border-top: 1px solid rgba(207,181,59,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-left  { font-size: 10px; color: rgba(255,255,255,0.28); font-weight: 300; }
+  .footer-right { font-size: 10px; color: var(--gold); font-weight: 500; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+
+<!-- ── BANNER ──────────────────────────────────────── -->
+<div class="banner">
+  <svg class="wheel" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+    <circle cx="100" cy="100" r="90" stroke="white" stroke-width="6"/>
+    <circle cx="100" cy="100" r="20" stroke="white" stroke-width="6"/>
+    <circle cx="100" cy="100" r="6" fill="white"/>
+    <line x1="100" y1="80" x2="100" y2="10" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    <line x1="100" y1="120" x2="100" y2="190" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    <line x1="80" y1="100" x2="10" y2="100" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    <line x1="120" y1="100" x2="190" y2="100" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    <line x1="85.9" y1="85.9" x2="34.3" y2="34.3" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    <line x1="114.1" y1="114.1" x2="165.7" y2="165.7" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    <line x1="114.1" y1="85.9" x2="165.7" y2="34.3" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    <line x1="85.9" y1="114.1" x2="34.3" y2="165.7" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+
+  <div class="banner-inner">
+    <div class="banner-left">
+      <div class="eyebrow">Hampton Marketing Collective · National Partner Organizations</div>
+      <div class="banner-title">Seven Organizations.<br>One Powerful Network.</div>
+      <div class="banner-sub">Student programs, scholarships, competitions, and career connections — all accessible through HMC</div>
+    </div>
+    <div class="banner-right">
+      <div class="banner-badge"><div class="banner-badge-text">HOME BY THE SEA · EST. 2026</div></div>
+      <div class="banner-meta">Hampton University · Hampton, Virginia</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── NAV ─────────────────────────────────────────── -->
+<div class="nav">
+  <div class="nav-inner">
+    <a href="#ama">AMA</a>
+    <a href="#nrf">NRF</a>
+    <a href="#nsn">NSN</a>
+    <a href="#brag">BRAG</a>
+    <a href="#hfr">Harlem's Fashion Row</a>
+    <a href="#cfda">CFDA</a>
+    <a href="#fsf">FSF / Virgil Abloh</a>
+  </div>
+</div>
+
+<!-- ── INTRO ────────────────────────────────────────── -->
+<div class="intro">
+  <div class="intro-inner">
+    <p class="intro-text">
+      As a member of the <strong>Hampton Marketing Collective</strong>, you have access to seven of the most prestigious professional organizations in marketing, retail, and fashion. Each relationship is managed by a dedicated <strong>HMC Liaison and Student Ambassador</strong> who connect you to competitions, conferences, scholarships, and career networks. The <strong>FSF relationship is faculty-advised</strong> — overseen directly by the HMC Academic Advisor with a previous FSF scholar serving as student coordinator.
+    </p>
+  </div>
+</div>
+
+<!-- ── ORG CARDS ─────────────────────────────────────── -->
+<div class="main">
+<div class="main-inner">
+
+  <!-- ── AMA ── -->
+  <div class="org-card ama" id="ama">
+    <div class="card-head">
+      <div class="org-icon">AMA</div>
+      <div>
+        <div class="org-name">American Marketing Association</div>
+        <div class="org-full">World's largest marketing professional organization · Est. 1937 · 320+ collegiate chapters</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">
+        The AMA is the premier community for marketing students and professionals worldwide. Membership connects you to a national network of 320+ collegiate chapters, exclusive competitions, career resources, and the <strong>AMA International Collegiate Conference</strong> — the largest gathering of undergraduate marketing students in the country.
+      </p>
+      <div class="highlight">
+        <div class="highlight-label">Student Membership — $29/year</div>
+        <div class="highlight-text">Includes access to your local AMA Collegiate Chapter, national competitions (fall online + spring in-person at ICC), webinars, Marketing News publication, AMAF scholarships, and the <strong>Alpha Mu Alpha</strong> national marketing honor society. Graduating members receive one free year of professional membership.</div>
+      </div>
+      <div class="pills">
+        <span class="pill">ICC Conference</span>
+        <span class="pill">Case competition</span>
+        <span class="pill">AMAF scholarships</span>
+        <span class="pill">Career week</span>
+        <span class="pill">Alpha Mu Alpha</span>
+        <span class="pill">320+ chapters</span>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-footer-dot"></div>
+        Managed by the HMC AMA Liaison + Student Ambassador
+      </div>
+    </div>
+  </div>
+
+  <!-- ── NRF ── -->
+  <div class="org-card nrf" id="nrf">
+    <div class="card-head">
+      <div class="org-icon">NRF</div>
+      <div>
+        <div class="org-name">National Retail Federation</div>
+        <div class="org-full">World's largest retail trade association · NRF Foundation student programs · 120+ university partners</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">
+        The NRF Foundation connects students to the $3.9 trillion retail industry through scholarships, career programming, and the signature <strong>NRF Foundation Student Program</strong> in New York City — a four-day immersive experience with retail executives, recruiters, and career fair from the world's top brands.
+      </p>
+      <div class="highlight">
+        <div class="highlight-label">Key Student Opportunities</div>
+        <div class="highlight-text">NRF Student Association membership, <strong>Next Generation Scholarship</strong>, <strong>Ray Greenly Scholarship</strong>, Rising Stars Scholarship, and the <strong>University Challenge</strong> — a business case competition awarding over $70,000 in scholarships and travel stipends. Student Program in NYC (January) gives access to Retail's Big Show.</div>
+      </div>
+      <div class="pills">
+        <span class="pill">Retail's Big Show NYC</span>
+        <span class="pill">$70K+ University Challenge</span>
+        <span class="pill">Next Gen Scholarship</span>
+        <span class="pill">Student Program NYC</span>
+        <span class="pill">RISE Up credential</span>
+        <span class="pill">Recruiter access</span>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-footer-dot"></div>
+        Managed by the HMC NRF Liaison + Student Ambassador
+      </div>
+    </div>
+  </div>
+
+  <!-- ── NSN ── -->
+  <div class="org-card nsn" id="nsn">
+    <div class="card-head">
+      <div class="org-icon">NSN</div>
+      <div>
+        <div class="org-name">National Sales Network</div>
+        <div class="org-full">Premier professional organization for diverse sales and marketing professionals · Est. 1992 · 16+ chapters nationwide</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">
+        NSN is the leading professional organization for <strong>African Americans in sales and marketing</strong>, with over 30 years of connecting diverse talent to Fortune-level companies. Their student program is one of the most powerful career launch opportunities available to HMC members — fully funded and highly competitive.
+      </p>
+      <div class="highlight">
+        <div class="highlight-label">Annual Student Conference — All Expenses Paid</div>
+        <div class="highlight-text">The NSN Student Sales &amp; Marketing Conference (September, Atlanta) is an <strong>invite-only, fully funded</strong> experience for top students from 25+ universities. NSN covers 100% of travel, hotel, meals, and registration for selected NSN Fellows. Includes workshops, mentorship, a career fair with on-site interviews, and a <strong>$10,000 pitch competition</strong>.</div>
+      </div>
+      <div class="pills">
+        <span class="pill">All-expenses-paid conference</span>
+        <span class="pill">$10K pitch prize</span>
+        <span class="pill">On-site interviews</span>
+        <span class="pill">Fortune company access</span>
+        <span class="pill">T-SET under-30 program</span>
+        <span class="pill">NSN Fellows</span>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-footer-dot"></div>
+        Managed by the HMC NSN Liaison + Student Ambassador
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BRAG ── -->
+  <div class="org-card brag" id="brag">
+    <div class="card-head">
+      <div class="org-icon">BRAG</div>
+      <div>
+        <div class="org-name">Black Retail Action Group</div>
+        <div class="org-full">Preparing professionals and students of color for executive leadership in retail and fashion · Est. 1970</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">
+        BRAG has been the definitive organization for <strong>professionals and students of color in retail and fashion</strong> for over 50 years. Through its internship programs, scholarships, college clubs, and annual Scholarship &amp; Awards Gala, BRAG creates concrete pathways from campus to executive leadership in the retail industry.
+      </p>
+      <div class="highlight">
+        <div class="highlight-label">Student Membership Benefits</div>
+        <div class="highlight-text">Access to BRAG's <strong>Summer Internship Program</strong> — a comprehensive hands-on program placing students with retail and fashion companies, culminating in a case study competition. BRAG College Clubs, networking events, workshops, industry panels, mentorship, and access to the annual Scholarship &amp; Awards Gala. Career connections to fashion and retail executives.</div>
+      </div>
+      <div class="pills">
+        <span class="pill">Summer internship</span>
+        <span class="pill">Case study competition</span>
+        <span class="pill">College club chapter</span>
+        <span class="pill">Annual gala</span>
+        <span class="pill">Scholarships</span>
+        <span class="pill">Exec mentorship</span>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-footer-dot"></div>
+        Managed by the HMC BRAG Liaison + Student Ambassador
+      </div>
+    </div>
+  </div>
+
+  <!-- ── HFR ── -->
+  <div class="org-card hfr" id="hfr">
+    <div class="card-head">
+      <div class="org-icon" style="font-size:13px; letter-spacing:0; font-family:'Poppins',sans-serif;">HFR</div>
+      <div>
+        <div class="org-name">Harlem's Fashion Row — HBCU Fashion Forum</div>
+        <div class="org-full">ICON360 nonprofit · Premier platform connecting HBCUs to the fashion industry · Est. 2007</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">
+        Harlem's Fashion Row (HFR) and its nonprofit <strong>ICON360</strong> are dedicated to creating equitable opportunities for Black designers and HBCU students in the fashion industry. Through its <strong>HBCU Fashion Summit</strong> and partnerships with brands like Nordstrom, Gap, Tiffany &amp; Co., Sam's Club, and American Eagle, HFR connects HBCU students directly to industry leaders and brand opportunities.
+      </p>
+      <div class="highlight" style="border:1px solid #ddd;">
+        <div class="highlight-label">HBCU Student Programs</div>
+        <div class="highlight-text">The <strong>HBCU Fashion Summit</strong> brings HBCU students together with retail and fashion executives for panels, mentorship, and networking. ICON360's <strong>360 Fashion Scholarship</strong> (in partnership with Nordstrom) awards HBCU students scholarships plus a semester-long 1:1 mentorship with fashion industry leaders. HFR also facilitates <strong>design competitions</strong> with brand partners offering cash prizes up to $75,000.</div>
+      </div>
+      <div class="pills">
+        <span class="pill">HBCU Fashion Summit</span>
+        <span class="pill">360 Scholarship (Nordstrom)</span>
+        <span class="pill">ICON360 grants</span>
+        <span class="pill">Brand design competitions</span>
+        <span class="pill">Industry mentorship</span>
+        <span class="pill">NYFW access</span>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-footer-dot"></div>
+        Managed by the HMC HFR Liaison + Student Ambassador
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CFDA ── -->
+  <div class="org-card cfda" id="cfda">
+    <div class="card-head">
+      <div class="org-icon">CFDA</div>
+      <div>
+        <div class="org-name">Council of Fashion Designers of America</div>
+        <div class="org-full">America's foremost fashion trade association · Est. 1962 · $5.9M+ in scholarships awarded since 1996</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">
+        The CFDA is the most prestigious fashion design organization in the United States, representing 400+ of America's top womenswear, menswear, jewelry, and accessory designers. Through its annual <strong>CFDA Scholarship Fund</strong>, the organization discovers and invests in exceptional student design talent — awarding scholarships ranging from $25,000 to <strong>$75,000</strong> to BFA and MFA students demonstrating innovation, sustainability, and boundary-pushing design. Past recipients include some of fashion's most recognized names.
+      </p>
+      <div class="highlight">
+        <div class="highlight-label">CFDA Scholarship Fund — Annual Scholarships up to $75,000</div>
+        <div class="highlight-text">
+          The <strong>CFDA Design Scholar Award</strong> ($75,000) is the highest honor — recognizing a BFA student for innovation in sustainable design, new technologies, or boundary-pushing concepts. Additional scholarships include the <strong>Geoffrey Beene Award</strong> ($50,000, MFA), the <strong>CFDA Design Scholar Award for DEI</strong> ($50,000), the <strong>Veronica Beard Creative Futures Scholarship</strong> ($50,000 each, 4 recipients + paid NYC internship), the <strong>Carolina Herrera &amp; CFDA Women in Design Scholarship</strong> ($40,000 + NYC internship), and the <strong>PVH Foundation x CFDA Scholarship</strong> ($25,000). Applications open annually in spring.
+        </div>
+      </div>
+      <div class="pills">
+        <span class="pill">$75K Design Scholar Award</span>
+        <span class="pill">$50K Geoffrey Beene Award</span>
+        <span class="pill">$50K DEI Design Award</span>
+        <span class="pill">Veronica Beard internship</span>
+        <span class="pill">Carolina Herrera internship</span>
+        <span class="pill">NYFW show access</span>
+        <span class="pill">415+ scholarships awarded</span>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-footer-dot"></div>
+        Managed by the HMC CFDA Liaison + Student Ambassador · Applications open each spring
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FSF / VIRGIL ABLOH ── -->
+  <div class="org-card fsf" id="fsf">
+    <div class="card-head">
+      <div class="org-icon">FSF</div>
+      <div>
+        <div class="org-name">
+          Fashion Scholarship Fund
+          <span class="fsf-badge">Faculty-Advised</span>
+        </div>
+        <div class="org-full">Virgil Abloh™ "Post-Modern" Scholar Program · Foremost fashion education nonprofit in the U.S. · Est. 1937</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">
+        The FSF is the most prestigious scholarship program in fashion education. The <strong>Virgil Abloh™ "Post-Modern" Scholarship</strong>, established in 2020 by the late Virgil Abloh (creator of Off-White and Artistic Director of Louis Vuitton Men's), provides scholarships to Black and African American students through an annual case study competition. This relationship is <strong>faculty-advised</strong> at Hampton — overseen directly by the HMC Academic Advisor with a previous FSF scholar as student coordinator.
+      </p>
+      <div class="highlight">
+        <div class="highlight-label">Virgil Abloh "Post-Modern" Scholar Program — $10,000+</div>
+        <div class="highlight-text">Each scholar receives <strong>at least $10,000</strong> in scholarship support, participation in the <strong>FSF Summer Scholar Series</strong> (10 weeks of master classes with fashion leaders), access to the annual <strong>FSF Gala in New York City</strong>, LVMH Maison tours, 1:1 industry mentorship, and talent acquisition events. The Chairman's Award offers an additional <strong>$25,000</strong>. 60 Post-Modern Scholars selected annually from FSF's 75 member schools including 14 HBCUs.</div>
+      </div>
+      <div class="pills">
+        <span class="pill">$10,000+ scholarship</span>
+        <span class="pill">FSF Gala NYC</span>
+        <span class="pill">Summer Scholar Series</span>
+        <span class="pill">LVMH Maison tours</span>
+        <span class="pill">$25K Chairman's Award</span>
+        <span class="pill">Industry mentorship</span>
+        <span class="pill">HBCU network (14 schools)</span>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-footer">
+        <div class="card-footer-dot"></div>
+        Faculty-advised by HMC Academic Advisor · FSF Scholar Coordinator manages student teams · Case study opens March, submits October
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main-inner -->
+</div><!-- /main -->
+
+<!-- ── FOOTNOTE SECTION ───────────────────────────── -->
+<div class="footnote-section">
+  <div class="footnote-inner">
+    <div class="eyebrow" style="color:var(--gold);">What this means for you</div>
+    <div class="banner-title" style="font-size:clamp(22px,3vw,32px); margin-top:8px;">Your membership opens every door.</div>
+    <div class="footnote-grid">
+      <div class="footnote-card">
+        <span class="footnote-icon">&#127775;</span>
+        <div class="footnote-title">Scholarships worth tens of thousands</div>
+        <div class="footnote-text">Between FSF ($10K–$25K), CFDA ($25K–$75K), NRF (Next Gen, Ray Greenly, Rising Stars), BRAG, and ICON360, HMC members have access to over $250,000 in annual scholarship opportunities across our seven partner organizations.</div>
+      </div>
+      <div class="footnote-card">
+        <span class="footnote-icon">&#9875;</span>
+        <div class="footnote-title">Real career connections, not just listings</div>
+        <div class="footnote-text">NSN's all-expenses-paid conference puts you in a room with Fortune-level companies conducting on-site interviews. NRF's Big Show puts you in front of hundreds of retail recruiters. These aren't career fairs — they're career launchers.</div>
+      </div>
+      <div class="footnote-card">
+        <span class="footnote-icon">&#127760;</span>
+        <div class="footnote-title">Networks built for Black professionals</div>
+        <div class="footnote-text">NSN, BRAG, HFR, and the FSF Virgil Abloh program were built specifically to create pathways for Black and African American professionals. These aren't generic networks — they exist because of the same barriers we're here to break.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────── -->
+<div class="footer">
+  <div class="footer-left">Hampton Marketing Collective · Hampton University · Hampton, Virginia · School of Business · Marketing Department · 2026–2027</div>
+  <div class="footer-right">THE HELM CREATIVE · Home by the Sea</div>
+</div>
+
+</body>
+</html>
